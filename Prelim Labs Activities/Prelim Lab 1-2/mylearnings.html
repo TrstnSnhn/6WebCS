@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Top 10 Learnings About the Internet and HTML5</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        .student-info p {
+            margin: 0.5rem 0;
+            font-weight: 500;
+        }
+
+        .student-info span {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        ol {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+        }
+
+        li::marker {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Top 10 Learnings About the Internet and HTML5</h1>
+    </header>
+
+    <main>
+        <section class="student-info">
+            <h2>Student Information</h2>
+            <p>Name: <span>Angelo Tristan Sinohin</span></p>
+            <p>Course: <span>BSCS</span></p>
+            <p>Section: <span>CS-202</span></p>
+        </section>
+
+        <section class="learnings">
+            <h2>Top 10 Learnings</h2>
+            <ol>
+                <li>The Internet is a global network of interconnected computers communicating via protocols.</li>
+                <li>The World Wide Web (WWW) is a collection of information accessible through the Internet using HTTP/HTTPS.</li>
+                <li>HTML5 provides the essential structure for creating modern, interactive web pages.</li>
+                <li>Protocols like HTTP, HTTPS, and FTP define how data is exchanged between clients and servers.</li>
+                <li>Website planning is crucial for defining goals, structure, and user experience before coding.</li>
+                <li>Semantic HTML5 elements (header, main, footer, etc.) improve accessibility and search engine optimization.</li>
+                <li>CSS (Cascading Style Sheets) is used to control the visual presentation and layout of HTML documents.</li>
+                <li>Web technologies continue to evolve, with HTML5 introducing native support for audio, video, and graphics.</li>
+                <li>URLs (Uniform Resource Locators) serve as the unique address for every resource on the web.</li>
+                <li>Modern web browsers are powerful engines that interpret HTML, CSS, and JavaScript to render websites.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by: Angelo Tristan Sinohin</p>
+    </footer>
+
+</body>
+</html>
