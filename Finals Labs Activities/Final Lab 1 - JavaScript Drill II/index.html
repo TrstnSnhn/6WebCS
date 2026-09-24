@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Drill: Part II | Angelo Tristan Sinohin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="badge-wrapper">
+        <span class="badge badge-accent">Finals Laboratory Activity</span>
+        <span class="badge">Web Systems &amp; Technologies</span>
+        <span class="badge">JavaScript ES6+</span>
+      </div>
+      <h1 class="site-title">JavaScript Drill: Part II</h1>
+      <p class="site-subtitle">
+        Hands-on technical implementation of data types, arithmetic type casting, conditional branching, iteration loops, and array/object manipulation.
+      </p>
+
+      <div class="student-meta-card">
+        <div class="meta-item">
+          <span class="meta-label">Student Name</span>
+          <span class="meta-val">Angelo Tristan D. Sinohin</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Course &amp; Section</span>
+          <span class="meta-val">BSCS CS202</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Academic Term</span>
+          <span class="meta-val">Finals Semester</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Date Submitted</span>
+          <span class="meta-val">September 24, 2026</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Nav Toolbar -->
+  <nav class="nav-toolbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="#lab2-1" class="nav-btn">Lab 2.1 Variables</a></li>
+        <li><a href="#lab2-3" class="nav-btn">Lab 2.3 Arithmetic</a></li>
+        <li><a href="#lab2-4" class="nav-btn">Lab 2.4 Conditionals</a></li>
+        <li><a href="#lab2-5" class="nav-btn">Lab 2.5 Loops</a></li>
+        <li><a href="#lab2-6" class="nav-btn">Lab 2.6 Arrays/Objects</a></li>
+        <li><a href="#docs" class="nav-btn">Full Documentation</a></li>
+      </ul>
+      <div class="nav-quick-actions">
+        <button class="btn btn-primary btn-sm" onclick="runAllLabs()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          Run All Drills
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Grid -->
+  <main class="main-layout">
+    
+    <!-- Left Column: Lab Cards -->
+    <div class="labs-container">
+
+      <!-- LAB 2.1 -->
+      <article id="lab2-1" class="lab-card">
+        <div class="card-header">
+          <div class="card-header-left">
+            <span class="lab-chip">Lab 2.1</span>
+            <h2 class="lab-title">Variables and Data Types</h2>
+          </div>
+          <button class="btn-copy" onclick="copyCode('code2_1')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copy
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="section-block">
+            <div class="section-label">Objective</div>
+            <div class="objective-text">Declare and display variables of different data types.</div>
+          </div>
+          <div class="section-block">
+            <div class="section-label">Instructions</div>
+            <ol class="instructions-list">
+              <li>Declare variables: <code>name</code> (string), <code>age</code> (number), <code>isStudent</code> (boolean), <code>grades</code> (array), <code>student</code> (object).</li>
+              <li>Print them and their types using <code>console.log</code> and <code>typeof</code>.</li>
+            </ol>
+          </div>
+          <div class="code-wrapper">
+            <div class="code-header">
+              <span class="code-lang-label">JavaScript</span>
+            </div>
+            <pre class="code-block" id="code2_1"><code>let name = "Juan";
+let age = 20;
+let isStudent = true;
+let grades = [85, 90, 92];
+let student = { firstName: "Juan", lastName: "Dela Cruz" };
+
+console.log(name, typeof name);
+console.log(age, typeof age);
+console.log(isStudent, typeof isStudent);
+console.log(grades, typeof grades);
+console.log(student, typeof student);</code></pre>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary" onclick="runLab2_1()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Run Lab 2.1
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- LAB 2.3 -->
+      <article id="lab2-3" class="lab-card">
+        <div class="card-header">
+          <div class="card-header-left">
+            <span class="lab-chip">Lab 2.3</span>
+            <h2 class="lab-title">Arithmetic &amp; Type Conversion</h2>
+          </div>
+          <button class="btn-copy" onclick="copyCode('code2_3')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copy
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="section-block">
+            <div class="section-label">Objective</div>
+            <div class="objective-text">Perform arithmetic operations and demonstrate type conversion.</div>
+          </div>
+          <div class="section-block">
+            <div class="section-label">Instructions</div>
+            <ol class="instructions-list">
+              <li>Ask the user for two numbers using <code>prompt()</code>.</li>
+              <li>Perform addition, subtraction, multiplication, and division.</li>
+              <li>Display results in an <code>alert</code>.</li>
+              <li>Show conversion of a string to a number and a number to boolean.</li>
+            </ol>
+          </div>
+          <div class="code-wrapper">
+            <div class="code-header">
+              <span class="code-lang-label">JavaScript</span>
+            </div>
+            <pre class="code-block" id="code2_3"><code>let num1 = Number(prompt("Enter first number:"));
+let num2 = Number(prompt("Enter second number:"));
+
+let sum = num1 + num2;
+let diff = num1 - num2;
+let prod = num1 * num2;
+let div = num1 / num2;
+
+alert(`Results: 
+Sum = ${sum} 
+Difference = ${diff} 
+Product = ${prod} 
+Division = ${div}`);
+
+let numString = "123";
+let numValue = Number(numString);
+let boolValue = Boolean(0);
+
+console.log("String:", numString, "Type:", typeof numString);
+console.log("Converted Number:", numValue, "Type:", typeof numValue);
+console.log("Boolean Value of 0:", boolValue);</code></pre>
+          </div>
+
+          <!-- Sandbox Area -->
+          <div class="sandbox-box">
+            <div class="sandbox-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              Quick In-Page Sandbox (No Browser Prompt)
+            </div>
+            <div class="sandbox-form">
+              <div class="input-group">
+                <label class="input-label" for="lab2_3_n1">First Number:</label>
+                <input type="number" id="lab2_3_n1" class="text-input" value="10">
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="lab2_3_n2">Second Number:</label>
+                <input type="number" id="lab2_3_n2" class="text-input" value="2">
+              </div>
+              <button class="btn btn-secondary btn-sm" onclick="runLab2_3_Sandbox()">Calculate in Sandbox</button>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn btn-primary" onclick="runLab2_3()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Run with Browser prompt() &amp; alert()
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- LAB 2.4 -->
+      <article id="lab2-4" class="lab-card">
+        <div class="card-header">
+          <div class="card-header-left">
+            <span class="lab-chip">Lab 2.4</span>
+            <h2 class="lab-title">Conditional Statements</h2>
+          </div>
+          <button class="btn-copy" onclick="copyCode('code2_4')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copy
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="section-block">
+            <div class="section-label">Objective</div>
+            <div class="objective-text">Use comparison and logical operators in conditionals.</div>
+          </div>
+          <div class="section-block">
+            <div class="section-label">Instructions</div>
+            <ol class="instructions-list">
+              <li>Ask the user for their age.</li>
+              <li>If 18 or older, display “You are an adult.” Otherwise, display “You are a minor.”</li>
+              <li>Validate the input to ensure it’s numeric.</li>
+            </ol>
+          </div>
+          <div class="code-wrapper">
+            <div class="code-header">
+              <span class="code-lang-label">JavaScript</span>
+            </div>
+            <pre class="code-block" id="code2_4"><code>let ageInput = prompt("Enter your age:");
+let ageNum = Number(ageInput);
+
+if (!isNaN(ageNum) && ageNum >= 18) {
+  alert("You are an adult.");
+} else if (!isNaN(ageNum)) {
+  alert("You are a minor.");
+} else {
+  alert("Invalid input!");
+}</code></pre>
+          </div>
+
+          <!-- Sandbox Area -->
+          <div class="sandbox-box">
+            <div class="sandbox-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              Quick In-Page Sandbox (Test Adult / Minor / Invalid)
+            </div>
+            <div class="sandbox-form">
+              <div class="input-group">
+                <label class="input-label" for="lab2_4_age">Enter Age Value:</label>
+                <input type="text" id="lab2_4_age" class="text-input" placeholder="e.g. 20, 15, or abc" value="20">
+              </div>
+              <button class="btn btn-secondary btn-sm" onclick="runLab2_4_Sandbox()">Evaluate Age</button>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn btn-primary" onclick="runLab2_4()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Run with Browser prompt() &amp; alert()
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- LAB 2.5 -->
+      <article id="lab2-5" class="lab-card">
+        <div class="card-header">
+          <div class="card-header-left">
+            <span class="lab-chip">Lab 2.5</span>
+            <h2 class="lab-title">Loops (For &amp; While)</h2>
+          </div>
+          <button class="btn-copy" onclick="copyCode('code2_5')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copy
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="section-block">
+            <div class="section-label">Objective</div>
+            <div class="objective-text">Practice for and while loops.</div>
+          </div>
+          <div class="section-block">
+            <div class="section-label">Instructions</div>
+            <ol class="instructions-list">
+              <li>Use a <code>for</code> loop to display numbers 1–10 in the console.</li>
+              <li>Ask the user for a number and compute its factorial using a <code>while</code> loop.</li>
+            </ol>
+          </div>
+          <div class="code-wrapper">
+            <div class="code-header">
+              <span class="code-lang-label">JavaScript</span>
+            </div>
+            <pre class="code-block" id="code2_5"><code>// For loop
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+
+// Factorial using while loop
+let n = Number(prompt("Enter a number to compute factorial:"));
+let fact = 1;
+let i = 1;
+while (i <= n) {
+  fact *= i;
+  i++;
+}
+console.log(`Factorial of ${n} = ${fact}`);</code></pre>
+          </div>
+
+          <!-- Sandbox Area -->
+          <div class="sandbox-box">
+            <div class="sandbox-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              Quick In-Page Sandbox (Factorial Calculator)
+            </div>
+            <div class="sandbox-form">
+              <div class="input-group">
+                <label class="input-label" for="lab2_5_n">Number for Factorial (n):</label>
+                <input type="number" id="lab2_5_n" class="text-input" value="5" min="0">
+              </div>
+              <button class="btn btn-secondary btn-sm" onclick="runLab2_5_Sandbox()">Compute Factorial</button>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn btn-primary" onclick="runLab2_5()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Run with Browser prompt() &amp; console.log
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- LAB 2.6 -->
+      <article id="lab2-6" class="lab-card">
+        <div class="card-header">
+          <div class="card-header-left">
+            <span class="lab-chip">Lab 2.6</span>
+            <h2 class="lab-title">Arrays and Objects</h2>
+          </div>
+          <button class="btn-copy" onclick="copyCode('code2_6')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copy
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="section-block">
+            <div class="section-label">Objective</div>
+            <div class="objective-text">Manipulate arrays and objects.</div>
+          </div>
+          <div class="section-block">
+            <div class="section-label">Instructions</div>
+            <ol class="instructions-list">
+              <li>Create an array of fruits with three elements and add another using <code>.push()</code>.</li>
+              <li>Remove the first fruit using <code>.shift()</code>.</li>
+              <li>Create an object <code>student</code> with properties <code>name</code>, <code>age</code>, and <code>course</code>.</li>
+              <li>Print both the array and object to the console.</li>
+            </ol>
+          </div>
+          <div class="code-wrapper">
+            <div class="code-header">
+              <span class="code-lang-label">JavaScript</span>
+            </div>
+            <pre class="code-block" id="code2_6"><code>let fruits = ["apple", "banana", "mango"];
+fruits.push("orange");
+fruits.shift();
+console.log(fruits);
+
+let student = {
+  name: "Maria",
+  age: 21,
+  course: "IT"
+};
+console.log(student);</code></pre>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary" onclick="runLab2_6()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Run Lab 2.6
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Right Column: Sticky Live Console / Terminal Simulator -->
+    <aside class="sticky-console">
+      <div class="terminal-card">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <span class="terminal-title">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+            Console &amp; Alert Output
+          </span>
+          <div class="terminal-actions">
+            <button class="btn-term-action" onclick="copyTerminal()" title="Copy logs">Copy</button>
+            <button class="btn-term-action" onclick="clearTerminal()" title="Clear terminal">Clear</button>
+          </div>
+        </div>
+        <div class="terminal-body" id="terminalLogs">
+          <div class="terminal-welcome">
+            // Ready. Output from console.log and alerts will stream here in real time.<br>
+            // Tip: You can also press [F12] to inspect your browser's native developer tools console!
+          </div>
+        </div>
+        <div class="terminal-footer">
+          <span id="logCount">0 logged</span>
+          <span>Status: Active</span>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Complete Documentation Section -->
+  <section id="docs" class="docs-section">
+    <div class="docs-card">
+      <h2>Laboratory Documentation &amp; Technical Report</h2>
+      <p>
+        The complete academic report is stored in <strong><code>DOCUMENTATION.md</code></strong>. Below is an overview of the key concepts and execution output references:
+      </p>
+
+      <h3>1. Summary Table of Completed Exercises</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Lab Exercise</th>
+            <th>Core Concept Tested</th>
+            <th>Primary Functions &amp; Syntax</th>
+            <th>Expected Output Summary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Lab 2.1</strong></td>
+            <td>Variables &amp; Data Types</td>
+            <td><code>let</code>, <code>typeof</code>, <code>console.log()</code></td>
+            <td>5 lines logging string, number, boolean, array (object), object.</td>
+          </tr>
+          <tr>
+            <td><strong>Lab 2.3</strong></td>
+            <td>Arithmetic &amp; Type Conversion</td>
+            <td><code>prompt()</code>, <code>Number()</code>, <code>Boolean()</code>, <code>alert()</code></td>
+            <td>Modal alert showing Sum, Diff, Prod, Div, and console conversions.</td>
+          </tr>
+          <tr>
+            <td><strong>Lab 2.4</strong></td>
+            <td>Conditional Statements</td>
+            <td><code>if...else if...else</code>, <code>!isNaN()</code>, <code>&gt;=</code></td>
+            <td>Alerts "You are an adult.", "You are a minor.", or "Invalid input!".</td>
+          </tr>
+          <tr>
+            <td><strong>Lab 2.5</strong></td>
+            <td>Loops (For &amp; While)</td>
+            <td><code>for</code> loop, <code>while</code> loop, <code>*=</code></td>
+            <td>Console logs 1 to 10; computes mathematical factorial of <code>n</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>Lab 2.6</strong></td>
+            <td>Arrays &amp; Objects</td>
+            <td><code>.push()</code>, <code>.shift()</code>, Object Literals</td>
+            <td>Mutated array <code>['banana', 'mango', 'orange']</code> and <code>student</code> object.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>2. Why Explicit Type Conversion Matters</h3>
+      <p>
+        In JavaScript, <code>prompt()</code> always returns data as a <code>string</code>. Without wrapping the prompt input in <code>Number()</code>, the <code>+</code> operator behaves as a string concatenation operator rather than a numeric addition operator. For example, <code>"10" + "2"</code> yields <code>"102"</code> instead of <code>12</code>. Explicit casting via <code>Number()</code> ensures arithmetic integrity.
+      </p>
+
+      <h3>3. Array Type Classification in JavaScript</h3>
+      <p>
+        Executing <code>typeof [85, 90, 92]</code> returns <code>"object"</code> rather than <code>"array"</code>. In the JavaScript language specification, arrays are specialized objects with integer-keyed index properties and an automatic <code>length</code> property. To specifically test for an array in modern JavaScript, developers use <code>Array.isArray(variable)</code>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p><strong>Angelo Tristan D. Sinohin</strong> &bull; BSCS CS202 &bull; Finals Laboratory Activities</p>
+    <p>Repository: <code>6WebCS</code> &bull; All scripts and documentation stored in <code>Finals Labs Activities/</code></p>
+  </footer>
+
+  <!-- Toast Notification Element -->
+  <div id="toast" class="toast">Operation completed</div>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
